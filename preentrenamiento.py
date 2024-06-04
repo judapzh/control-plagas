@@ -1,8 +1,7 @@
-preentrenamiento.py
+
 import tensorflow as tf
 from tensorflow.keras.applications import MobileNetV2
 jls_extract_var = layers
-from tensorflow.keras.jls_extract_va
 import Dense, GlobalAveragePooling2D
 from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import Adam
@@ -43,7 +42,7 @@ history = model.fit(
 )
 
 # Guardar el modelo final
-model.save('final_model.h5')
+model.save('modelo_IA.h5')
 
 # Evaluar el modelo en el conjunto de validación
 val_loss, val_accuracy = model.evaluate(validation_generator, steps=validation_generator.samples // BATCH_SIZE)

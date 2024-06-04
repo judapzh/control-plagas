@@ -5,8 +5,8 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from PIL import Image
 
 # Definir las rutas de las carpetas de origen y destino
-source_dir = 'ruta/a/tu/carpeta/de/imagenes'
-dest_dir = 'ruta/a/tu/carpeta/de/dataset'
+source_dir = 'C:/Users/judap/Pictures/Camera Roll/predator'
+dest_dir ='C:/Users/judap/Pictures/dataset'
 
 # Crear las carpetas de destino si no existen
 os.makedirs(dest_dir, exist_ok=True)
@@ -52,3 +52,7 @@ validation_generator = datagen.flow_from_directory(
     class_mode='categorical',
     subset='validation'  # Datos de validación
 )
+
+# Verificar que se ha cargado el dataset correctamente
+print(f'Total de imágenes de entrenamiento: {train_generator.samples}')
+print(f'Total de imágenes de validación: {validation_generator.samples}')

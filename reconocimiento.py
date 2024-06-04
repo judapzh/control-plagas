@@ -23,7 +23,8 @@ def procesar_fotograma(frame):
                         caracteristicas = modelo_IA.predict(img)
 
                             # Aquí asumimos que el modelo devuelve una probabilidad de detección
-                                # Puedes ajustar esto según la salida específica de tu modelo
+                                # se ajustar
+                esto según la salida específica de tu modelo
                                     if caracteristicas[0][0] > 0.5:  # Si la característica detectada supera un umbral
                                             print("Características detectadas:", caracteristicas)
                                                     activar_dispositivos()
@@ -56,7 +57,7 @@ def procesar_fotograma(frame):
                                                                                                                     # Mostrar fotograma (opcional)
                                                                                                                         cv2.imshow('Video', frame)
 
-                                                                                                                            # Salir con 'q'
+                                                                                                                            # Salir con 'q' en
                                                                                                                                 if cv2.waitKey(1) & 0xFF == ord('q'):
                                                                                                                                         break
 
