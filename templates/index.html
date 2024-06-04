@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detección de Animales en Tiempo Real</title>
+</head>
+
+<body>
+    <h1>Detección de Animales en Tiempo Real</h1>
+    <button onclick="startDetection()">Iniciar Detección</button>
+    <div id="video-container" style="display: none;">
+        <h2>Video en Tiempo Real</h2>
+        <img id="video" src="{{ url_for('video_feed') }}" width="640" height="480" />
+    </div>
+
+    <script>
+        function startDetection() {
+            document.getElementById('video-container').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
